@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "snusmod3",
+  "version": "${version}",
+  "name": "Snusmod3",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/snusmod3/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "alexnomad.snusmod3.client.Snusmod3Client"
+    ],
+    "main": [
+      "alexnomad.snusmod3.Snusmod3"
+    ]
+  },
+  "mixins": [
+    "snusmod3.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "fabric": "*",
+    "minecraft": "1.19"
+  }
+}
