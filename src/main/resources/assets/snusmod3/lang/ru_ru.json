@@ -1,0 +1,8 @@
+{
+  "item.snusmod3.snus": "Снюс",
+  "item.snusmod3.snus_puck": "Шайба снюса",
+  "item.snusmod3.heroin_syringe": "Шприц с героином",
+  "death.attack.heroin_overdose": "%1$s умер от передозировки героином",
+  "death.attack.heroin_forced_overdose": "%1$s был заколот героином до смерти игроком %2$s",
+  "itemGroup.snusmod3.drugs": "Снюсмод В3 Наркотики"
+}
