@@ -1,7 +1,6 @@
 package alexnomad.snusmod3;
 
 import alexnomad.snusmod3.item.ModItems;
-import alexnomad.snusmod3.item.SnusPuckItem;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
