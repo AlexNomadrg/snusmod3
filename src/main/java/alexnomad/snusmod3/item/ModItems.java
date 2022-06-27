@@ -16,7 +16,10 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snus_puck"), SNUS_PUCK);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snus"), SNUS);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "heroin_syringe"), HEROIN_SYRINGE);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "powder_meth"), POWDER_METH);
     }
+
+    private static final FabricItemSettings drugItemSettings = new FabricItemSettings().group(MOD_ITEM_GROUP).maxCount(1);
 
     public static final Item SNUS_PUCK = new SnusPuckItem(new FabricItemSettings().group(MOD_ITEM_GROUP).maxCount(1));
     public static final Item SNUS = new Item(new FabricItemSettings().group(MOD_ITEM_GROUP)
@@ -24,6 +27,7 @@ public class ModItems {
                     .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200, 0), 1.0f)
                     .alwaysEdible().snack().hunger(2).saturationModifier(0.2f).build()));
 
-    public static final Item HEROIN_SYRINGE = new HeroinSyringeItem(new FabricItemSettings().group(MOD_ITEM_GROUP).maxCount(1));
+    public static final Item HEROIN_SYRINGE = new HeroinSyringeItem(drugItemSettings);
 
+    public static final Item POWDER_METH = new PowderMethItem(drugItemSettings);
 }

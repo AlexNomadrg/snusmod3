@@ -1,8 +1,10 @@
 {
-  "itemGroup.snusmod3.drugs": "Snusmod v3 Drugs",
+  "itemGroup.snusmod3.drugs": "Snusmod v3",
   "item.snusmod3.snus": "Snus",
   "item.snusmod3.snus_puck": "Snus puck",
   "item.snusmod3.heroin_syringe": "Heroin Syringe",
-  "death.attack.heroin_overdose": "%1$s died from overdose of heroin",
-  "death.attack.heroin_forced_overdose": "%1$s was overdosed by %2$s"
+  "item.snusmod3.powder_meth": "Meth Powder",
+  "death.attack.heroin_overdose": "%1$s died from heroin overdose",
+  "death.attack.heroin_forced_overdose": "%1$s was forcefully overdosed by %2$s",
+  "death.attack.meth_overdose": "%1$s died from meth overdose"
 }
