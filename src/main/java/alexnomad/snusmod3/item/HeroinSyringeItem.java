@@ -1,61 +1,41 @@
 package alexnomad.snusmod3.item;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.EntityDamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.world.World;
 
-public class HeroinSyringeItem extends Item {
+import java.util.ArrayList;
+import java.util.List;
+
+public class HeroinSyringeItem extends Drug {
     public HeroinSyringeItem(Settings settings) {
         super(settings);
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        var stack = user.getStackInHand(hand);
-        stack.setCount(0);
-
-        user.playSound(SoundEvents.ENTITY_WANDERING_TRADER_DRINK_POTION, SoundCategory.PLAYERS, 1f,1.2f);
-
-        EntityDamageSource source = new EntityDamageSource("heroin_overdose", user);
-        user.damage(source, 10);
-
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 200));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 600, 1));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 600));
-        user.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 1));
-
-        return TypedActionResult.success(stack);
+    public int getUseDamage() {
+        return 19;
     }
 
     @Override
-    public boolean postHit(ItemStack stack, LivingEntity entity, LivingEntity user) {
-        stack.setCount(0);
+    public String getDamageSourceName() {
+        return "heroin_overdose";
+    }
 
-        user.playSound(SoundEvents.ENTITY_WANDERING_TRADER_DRINK_POTION, 1f,1.2f);
+    @Override
+    public String getDamageSourceNameForced() {
+        return "heroin_overdose_forced";
+    }
 
-        EntityDamageSource source = new EntityDamageSource("heroin_forced_overdose", user);
-        entity.damage(source, 19);
+    @Override
+    public List<StatusEffectInstance> getUseStatusEffects() {
+        List<StatusEffectInstance> list = new ArrayList<>();
+        list.add(new StatusEffectInstance(StatusEffects.BLINDNESS, 100));
+        list.add(new StatusEffectInstance(StatusEffects.LEVITATION, 100));
+        list.add(new StatusEffectInstance(StatusEffects.NAUSEA, 200));
+        list.add(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1));
+        list.add(new StatusEffectInstance(StatusEffects.GLOWING, 200));
+        list.add(new StatusEffectInstance(StatusEffects.HUNGER, 600, 2));
 
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 200));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 1));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 200));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 600, 1));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 600));
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 1));
-
-        return true;
+        return list;
     }
 }
