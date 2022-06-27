@@ -1,5 +1,6 @@
-package alexnomad.snusmod3.item;
+package alexnomad.snusmod3.item.drugs;
 
+import alexnomad.snusmod3.item.drugs.Drug;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 

@@ -1,4 +1,4 @@
-package alexnomad.snusmod3.item;
+package alexnomad.snusmod3.item.drugs;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;

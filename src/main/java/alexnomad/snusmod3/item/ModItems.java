@@ -1,5 +1,7 @@
 package alexnomad.snusmod3.item;
 
+import alexnomad.snusmod3.item.drugs.HeroinSyringeItem;
+import alexnomad.snusmod3.item.drugs.PowderMethItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
