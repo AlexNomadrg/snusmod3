@@ -1,5 +1,6 @@
 package alexnomad.snusmod3.item;
 
+import alexnomad.snusmod3.item.drugs.CocaineItem;
 import alexnomad.snusmod3.item.drugs.HeroinSyringeItem;
 import alexnomad.snusmod3.item.drugs.PowderMethItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -19,6 +20,7 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snus"), SNUS);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "heroin_syringe"), HEROIN_SYRINGE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "powder_meth"), POWDER_METH);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cocaine"), COCAINE);
     }
 
     private static final FabricItemSettings drugItemSettings = new FabricItemSettings().group(MOD_ITEM_GROUP).maxCount(1);
@@ -32,4 +34,6 @@ public class ModItems {
     public static final Item HEROIN_SYRINGE = new HeroinSyringeItem(drugItemSettings);
 
     public static final Item POWDER_METH = new PowderMethItem(drugItemSettings);
+
+    public static final Item COCAINE = new CocaineItem(drugItemSettings);
 }

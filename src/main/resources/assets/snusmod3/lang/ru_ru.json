@@ -6,5 +6,9 @@
   "death.attack.heroin_forced_overdose": "%1$s был заколот героином до смерти игроком %2$s",
   "itemGroup.snusmod3.drugs": "Снюсмод 3",
   "item.snusmod3.powder_meth": "Метамфетамин",
-  "death.attack.meth_overdose": "%1$s умер от передозировки метамфетамином"
+  "death.attack.meth_overdose": "%1$s умер от передозировки метамфетамином",
+  "item.snusmod3.cocaine": "Кокаин",
+  "item.snusmod3.cocaine_pack": "Упакованный Кокаин",
+  "item.snusmod3.empty_pack": "Пустой Пакетик",
+  "item.snusmod3.meth_pack": "Упакованный Метафетамин"
 }
